@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cartoon Hub</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    /* Simple inline styles contained inside HTML only (still valid HTML) */
+    body{font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f8f8;}
+    header{display:flex; align-items:center; gap:12px; background:#111; color:#fff; padding:12px 18px;}
+    .logo{width:48px; height:48px; border-radius:6px; background:#fff; display:flex; align-items:center; justify-content:center; font-weight:bold; color:#111;}
+    .site-name{font-size:20px; font-weight:700;}
+    main{padding:16px; max-width:1100px; margin:18px auto;}
+    .marquee-wrap{margin:12px 0; overflow:hidden; border-radius:8px; background:#222; padding:8px;}
+    .marquee img{height:180px; margin-right:12px; border-radius:6px;}
+    .trending{margin-top:18px;}
+    .trending h2{margin:6px 0 12px 0;}
+    .thumb-row{display:flex; gap:12px; overflow-x:auto; padding-bottom:8px;}
+    .thumb-row a{flex:0 0 auto; text-decoration:none; color:inherit;}
+    .thumb-row img{height:240px; border-radius:8px; display:block;}
+    footer{text-align:center; color:#666; padding:18px 0; margin-top:28px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CH</div>
+    <div class="site-name">Cartoon Hub</div>
+  </header>
+
+  <main>
+    <!-- Scrolling landscape images using <marquee> to match user's request -->
+    <div class="marquee-wrap">
+      <marquee class="marquee" behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+        <img src="images/landscapeimage.png" alt="landscape1">
+        <img src="images/landscapeimage1.png" alt="landscape2">
+        <img src="images/landscapeimage2.png" alt="landscape3">
+      </marquee>
+    </div>
+
+    <!-- Trending cartoons: 5 portrait images side by side -->
+    <section class="trending">
+      <h2>Trending Cartoons</h2>
+      <div class="thumb-row">
+        <a href="detail1.html"><img src="images/heidi.png" alt="cartoon1"></a>
+        <a href="detail2.html"><img src="images/magicwonderland.png" alt="cartoon2"></a>
+        <a href="detail3.html"><img src="images/motupatulu.png" alt="cartoon3"></a>
+        <a href="detail4.html"><img src="images/shinchan.png" alt="cartoon4"></a>
+        <a href="detail5.html"><img src="images/wordworld.png" alt="cartoon5"></a>
+      </div>
+    </section>
+
+    <footer>
+      Built with only HTML — click any poster to open its detail page (image + YouTube trailer + description).
+    </footer>
+  </main>
+</body>
+</html>
